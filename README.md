@@ -8,7 +8,7 @@ Stay tuned!
 
 ## Installation
 
-RBCDE depends on numpy and scipy. The package is available on pip, and can be easily installed as follows:
+RBCDE depends on numpy, scipy and pandas. The package is available on pip, and can be easily installed as follows:
 
 	pip3 install rbcde
 
