@@ -9,10 +9,10 @@ rbcde
 =====
 
 .. automodule:: rbcde
-   :members: 
+   :members: RBC, filter_markers
 
 rbcde.matrix
 ============
 
 .. automodule:: rbcde.matrix
-   :members: 
+   :members: RBC, filter_markers
