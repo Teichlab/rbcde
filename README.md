@@ -31,4 +31,4 @@ An HTML render of the RBCDE function docstrings, detailing all the parameters, c
 
 ## Example Notebook
 
-[rbc_demo.ipynb](https://nbviewer.jupyter.org/github/Teichlab/bbknn/blob/master/examples/rbc_demo.ipynb) computes the rank-biserial correlation coefficient for demonstration 10X PBMC data, yielding a similar standard of markers to established approaches while reporting only ~13% of the gene total. This more compact summary does not require any heuristic filtering to obtain. The full marker export yielded by the analysis can be found at `examples/markers.csv`
+[rbc_demo.ipynb](https://nbviewer.jupyter.org/github/Teichlab/rbcde/blob/master/examples/rbc_demo.ipynb) computes the rank-biserial correlation coefficient for demonstration 10X PBMC data, yielding a similar standard of markers to established approaches while reporting only ~13% of the gene total. This more compact summary does not require any heuristic filtering to obtain. The full marker export yielded by the analysis can be found at `examples/markers.csv`
