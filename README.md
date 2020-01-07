@@ -18,7 +18,7 @@ RBCDE can slot into a scanpy workflow and accept an object with `log(CPM/100 + 1
 
 	import rbcde
 	rbcde.RBC(adata)
-	degs, plot\_dict = rbcde.filter_markers(adata)
+	degs, plot_dict = rbcde.filter_markers(adata)
 
 `rbcde.RBC()`'s `clus_key` argument controls which `.obs` column is used for the grouping, and a combination of `layer` and `use_raw` can instruct the function to retrieve expression data from `.X`, `.layers` or `.raw`. `rbcde.filter_markers()` takes the computed coefficient values and thresholds them into a list of per-cluster markers. The thresholding can be controlled via the `thresh` argument, with a range of literature [critical values](https://en.wikipedia.org/wiki/Effect_size#Pearson_r_or_correlation_coefficient) available. A helper dictionary, compatible with the formatting scanpy plotting functions accept in the `var_names` argument.
 
