@@ -14,7 +14,7 @@ RBCDE depends on numpy, scipy and pandas. The package is available on pip, and c
 
 ## Usage and Documentation
 
-RBCDE can slot into a scanpy workflow and accept an object with per cell normalised data stored as a layer or `.raw`, and the desired clustering/grouping vector as an `.obs` column. If mirroring the [scanpy PBMC tutorial](https://scanpy-tutorials.readthedocs.io/en/latest/pbmc3k.html), the outputs of `sc.pp.normalize_total()` and `sc.pp.log1p()` both produce adequate representations of the data.
+RBCDE can slot into a scanpy workflow and accept an object with per cell normalised data stored as a layer or `.raw`, and the desired clustering/grouping vector as an `.obs` column. If mirroring the [scanpy PBMC tutorial](https://scanpy-tutorials.readthedocs.io/en/latest/pbmc3k.html), the output of `sc.pp.log1p()` produces a generally useful data representation (the earlier step `sc.pp.normalize_total()` will yield identical RBCDE results).
 
 	import rbcde
 	rbcde.RBC(adata)
