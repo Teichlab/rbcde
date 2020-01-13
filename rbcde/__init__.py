@@ -24,7 +24,7 @@ def RBC(adata, clus_key='leiden', layer=None, use_raw=False):
 	Input
 	-----
 	adata : ``AnnData``
-		Needs ``log(CPM/100 + 1)`` data stored somewhere in the object (as either sparse or 
+		Needs per cell normalised data stored somewhere in the object (as either sparse or 
 		dense), and the desired clustering/grouping vector included in `.obs`.
 	clus_key : ``str``, optional (default: "leiden")
 		The name of the `.obs` column containing the clustering/grouping.

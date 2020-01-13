@@ -14,7 +14,7 @@ RBCDE depends on numpy, scipy and pandas. The package is available on pip, and c
 
 ## Usage and Documentation
 
-RBCDE can slot into a scanpy workflow and accept an object with `log(CPM/100 + 1)` data stored as a layer or `.raw`, and the desired clustering/grouping vector as an `.obs` column:
+RBCDE can slot into a scanpy workflow and accept an object with per cell normalised data stored as a layer or `.raw`, and the desired clustering/grouping vector as an `.obs` column:
 
 	import rbcde
 	rbcde.RBC(adata)

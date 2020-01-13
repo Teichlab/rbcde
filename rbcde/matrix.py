@@ -19,7 +19,7 @@ def RBC(data, clusters, vars):
 	Input
 	-----
 	data : ``np.array`` or ``scipy.sparse``
-		``log(CPM/100 + 1)``, if using single cell count data. Variables as rows, 
+		Per cell normalised, if using single cell count data. Variables as rows, 
 		observations as columns.
 	clusters : ``np.array`` or ``list``
 		A vector of cluster/group assignments for each observation.
