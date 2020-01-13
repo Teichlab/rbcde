@@ -14,7 +14,7 @@ RBCDE depends on numpy, scipy and pandas. The package is available on pip, and c
 
 ## Usage and Documentation
 
-RBCDE can slot into a scanpy workflow and accept an object with per cell normalised data stored as a layer or `.raw`, and the desired clustering/grouping vector as an `.obs` column:
+RBCDE can slot into a scanpy workflow and accept an object with per cell normalised data stored as a layer or `.raw`, and the desired clustering/grouping vector as an `.obs` column. If mirroring the [scanpy PBMC tutorial](https://scanpy-tutorials.readthedocs.io/en/latest/pbmc3k.html), the outputs of `sc.pp.normalize_total()` and `sc.pp.log1p()` both produce adequate representations of the data.
 
 	import rbcde
 	rbcde.RBC(adata)
@@ -22,7 +22,7 @@ RBCDE can slot into a scanpy workflow and accept an object with per cell normali
 
 `rbcde.RBC()`'s `clus_key` argument controls which `.obs` column is used for the grouping, and a combination of `layer` and `use_raw` can instruct the function to retrieve expression data from `.X`, `.layers` or `.raw`. `rbcde.filter_markers()` takes the computed coefficient values and thresholds them into a list of per-cluster markers. The thresholding can be controlled via the `thresh` argument, with a range of literature [critical values](https://en.wikipedia.org/wiki/Effect_size#Pearson_r_or_correlation_coefficient) available. A helper dictionary, compatible with the formatting scanpy plotting functions accept in the `var_names` argument.
 
-Analogous functions exist for scanpy-independent data analysis, and can ingest any data matrix with variables as rows and observations as columns. The filtering function does not produce a helper dictionary, only yielding the marker data frame.
+Analogous functions exist for scanpy-independent data analysis, and can ingest any data matrix with variables as rows and observations as columns along with a vector of cluster/group assignments for the observations and a second vector of variable names. The filtering function does not produce a helper dictionary, only yielding the marker data frame.
 
 	results = rbcde.matrix.RBC(data, clusters, vars)
 	degs = rbcde.matrix.filter_markers(results)
